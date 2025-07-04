@@ -4,22 +4,21 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        string nullString = null;
-        string emptyString = "";
+        
         string incorrectInput = "sd64s6df ";
-        string num1 = "89";
+        string positive = "89";
+        string negative = "-20";
 
-        Check(nullString);
-        Check(emptyString);
         Check(incorrectInput);
-        Check(num1);
+        Check(positive);
+        Check(negative);
     }
 
     public static void Check(string num) 
     {
         try
         {
-            var result = Multiplication.MultiplyByFive(num);
+            var result = Multiplication.MultiplyByFiveOnlyNegatives(num);
             Console.WriteLine("result = " + result);
         }
         catch (Exception e)

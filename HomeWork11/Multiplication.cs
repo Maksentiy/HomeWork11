@@ -2,12 +2,8 @@
 
 public class Multiplication
 {
-    public static int MultiplyByFive(string num1) 
+    public static int MultiplyByFiveOnlyNegatives(string num1) 
     {
-        if (num1 == null) 
-        {
-            throw new Exception("num1 = null");
-        }
         if (num1 == "") 
         {
             throw new Exception("string is empty");
@@ -16,7 +12,10 @@ public class Multiplication
         {
             throw new Exception("Incorrect input");
         }
-
+        if (result >= 0)
+        {
+            throw new Exception("You can't multiply positive numbers");
+        }
 
         return result * 5; 
     }
